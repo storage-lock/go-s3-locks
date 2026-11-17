@@ -5,8 +5,8 @@ go 1.25.0
 require (
 	github.com/minio/minio-go/v7 v7.2.1
 	github.com/storage-lock/go-s3-storage v0.0.2
-	github.com/storage-lock/go-storage v0.0.3
-	github.com/storage-lock/go-storage-lock v0.0.6
+	github.com/storage-lock/go-storage v0.1.0
+	github.com/storage-lock/go-storage-lock v0.1.0
 	github.com/storage-lock/go-storage-lock-factory v0.0.2-0.20230830164658-ef9d99aed23d
 	github.com/stretchr/testify v1.11.1
 )
@@ -40,11 +40,4 @@ require (
 	golang.org/x/text v0.37.0 // indirect
 	gopkg.in/ini.v1 v1.67.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-)
-
-replace (
-	github.com/storage-lock/go-s3-storage => ../go-s3-storage
-	github.com/storage-lock/go-storage => ../go-storage
-	github.com/storage-lock/go-storage-lock => ../go-storage-lock
-	github.com/storage-lock/go-storage-lock-test-helper => ../go-storage-lock-test-helper
 )
