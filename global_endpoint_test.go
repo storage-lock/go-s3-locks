@@ -71,7 +71,9 @@ func TestNewS3LockByEndpoint(t *testing.T) {
 	})
 	assert.Nil(t, err)
 	exists, err := client.BucketExists(ctx, "storage-lock-test")
-	assert.Nil(t, err)
+	if err != nil {
+		t.Skipf("对象存储不可用，跳过集成测试: %v", err)
+	}
 	if !exists {
 		err = client.MakeBucket(ctx, "storage-lock-test", minio.MakeBucketOptions{})
 		assert.Nil(t, err)
